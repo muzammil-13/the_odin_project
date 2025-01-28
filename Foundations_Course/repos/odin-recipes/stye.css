@@ -1,0 +1,27 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1{
+    color: rgb(67, 201, 87);
+}
+
+h1-img{
+    border: 10px;
+    background-color: rgb(53, 202, 103);
+}
+
+ul{
+    background-color: aqua;
+}
+
+.view-more{
+    background-color: red;
+}
+
+.view-recipe{
+    background-color: green;
+}
+.home-btn{
+    background-color: yellow;
+}
