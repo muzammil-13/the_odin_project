@@ -2,4 +2,7 @@ function lastLetter(str){
     return str.charAt(str.length-1)  
 }
 
-console.log(lastLetter("abcd"))
+let string=prompt("Enter a string:")
+let result=lastLetter(string)
+console.log(result)
+document.getElementById('output').textContent=result
