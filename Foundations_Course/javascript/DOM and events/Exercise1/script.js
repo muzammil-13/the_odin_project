@@ -10,9 +10,16 @@
 const container=document.querySelector("#container");
 // console.log(container)
 
+// 1. a <p> with red text that says “Hey I’m red!”
 const p=document.createElement("p");
 // console.log(p)
 container.appendChild(p)
 // console.log(p)
 p.textContent="Hey I'm red";
 p.style.cssText="color:red;";
+
+// 2. an <h3> with blue text that says “I’m a blue h3!”
+const h3=document.createElement('h3')
+container.appendChild(h3);
+h3.textContent="I'm a blue h3!";
+h3.style.cssText="color:blue";
