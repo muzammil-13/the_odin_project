@@ -10,3 +10,8 @@ btn.onclick=alertFunction;
 
 // method3
 btn.addEventListener("click",alertFunction);
+
+// access event info
+btn.addEventListener("click",function(e){
+    console.log(e);
+});
