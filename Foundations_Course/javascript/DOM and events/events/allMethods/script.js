@@ -15,3 +15,13 @@ btn.addEventListener("click",alertFunction);
 btn.addEventListener("click",function(e){
     console.log(e);
 });
+
+// log target information
+btn.addEventListener("click",function(e){
+    console.log(e.target);
+});
+
+// change button background color 
+btn.addEventListener("click",function(e){
+    e.target.style.background="blue";
+});
