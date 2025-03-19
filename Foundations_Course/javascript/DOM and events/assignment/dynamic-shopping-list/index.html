@@ -33,34 +33,41 @@
     <script>
       // Create three variables that hold references to the list (<ul>), <input>, and <button> elements.
         const ul=document.querySelector("ul")
-        const input=document.querySelector("item")
+        const input=document.querySelector("#item")
         const button=document.querySelector("button");
-        // Create a function that will run in response to the button being clicked.
-        button=addEventListener("click",(input)=>{
-          alert(button.id)
-          // Inside the function body, start off by storing the current value of the input element in a variable.
-          let value=input;
-          // Next, empty the input element by setting its value to an empty string — ''.
-          input='';
 
-          // Create three new elements — a list item (<li>), <span>, and <button>, and store them in variables.
-          const li=document.querySelector("li")
-          const span=document.querySelector("span")
-          const btn2=document.querySelector("button")
-            // Append the span and the button as children of the list item.
-          li.appendChild(span)
-          li.appendChild(btn2)
-          // Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
-          span.textContent(value);
-          btn2.textContent("Delete")
-          // Append the list item as a child of the list.
-          li.appendChild("#item")
-          // Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (<li>...</li>).
-          btn2.addEventListener("click",()=>{
-            ul.removeChild(li)
-         });
-        //  Finally, use the focus() method to focus the input element ready for entering the next shopping list item.
-        input.focus()
+        // Create a function that will run in response to the button being clicked.
+        button.addEventListener("click",()=>{
+          // Inside the function body, start off by storing the current value of the input element in a variable.
+          const value=input.value;
+          if(value){
+            // Next, empty the input element by setting its value to an empty string — ''.
+            input.value='';
+
+            // Create three new elements — a list item (<li>), <span>, and <button>, and store them in variables.
+            const li=document.createElement("li")
+            const span=document.createElement("span")
+            const btn2=document.createElement("button")
+
+              // Append the span and the button as children of the list item.
+            li.appendChild(span)
+            li.appendChild(btn2)
+
+              // Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
+            span.textContent=value;
+            btn2.textContent="Delete"
+
+              // Append the list item as a child of the list.
+            ul.appendChild(li);
+
+            // Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (<li>...</li>).
+            btn2.addEventListener("click",()=>{
+              ul.removeChild(li)
+          });
+
+          //  Finally, use the focus() method to focus the input element ready for entering the next shopping list item.
+          input.focus()
+          }
         });
     </script>
   </body>
