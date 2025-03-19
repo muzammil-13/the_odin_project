@@ -31,7 +31,26 @@
     </ul>
 
     <script>
+        const ul=document.querySelector("ul")
+        const input=document.querySelector("item")
+        const button=document.querySelector("button");
+        button=addEventListener("click",(input)=>{
+          alert(button.id)
+          let value=input
+          input='';
 
+        const li=document.querySelector("li")
+        const span=document.querySelector("span")
+        const btn2=document.querySelector("button")
+
+        li.appendChild(span,btn2)
+        span.textContent(value)
+        btn2=textContent("Delete")
+
+        btn2.addEventListener("click",()=>{
+          ul.removeChild(li)
+        })
+        })
     </script>
   </body>
 </html>
